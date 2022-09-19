@@ -1,6 +1,6 @@
 # Отчёт к учебному практическому заданию №1 #
 _Работу выполнил Артамонов Кирилл, студент группы Б01-007_
-Программный код можно найти на [`GitHub`](https://github.com/ksartamonov/Netcracker-Edu-Center/tree/master/PracticalTask1/src)
+Программный код можно найти на [`GitHub`](https://github.com/ksartamonov/Netcracker-Special-Course/tree/master/PracticalTask1)
 ## 1. Квадратное уравнение ##
 Рассмотрим класс __QuadraticEquation.java__, осуществляющий решения квадратных уравнений:
 ### 1.1 Поля класса
