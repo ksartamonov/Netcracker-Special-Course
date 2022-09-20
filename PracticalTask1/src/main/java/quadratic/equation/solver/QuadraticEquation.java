@@ -68,7 +68,10 @@ public class QuadraticEquation {
                 value = calculateValue();
             }
             private double calculateValue() {
-                return coeffB * coeffB - 4 * coeffA * coeffC;
+                double value = coeffB * coeffB - 4 * coeffA * coeffC;
+                if (Double.isNaN(value))
+                    throw new RuntimeException("[err] Not enough precision");
+                return value;
             }
         }
 

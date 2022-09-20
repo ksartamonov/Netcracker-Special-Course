@@ -33,37 +33,40 @@ private static final double PRECISION = 1e-6;
 
 Далее реализована основная функция решения квадратного уравнения __solveEquation()__, записывающая решения в поля __x1, x2__:
 ```java
-    public void solveEquation() {
-        /** Inner class calculating Discriminant */
-        class Discriminant {
-            private double value;
-            public Discriminant() {
-                value = calculateValue();
-            }
-            private double calculateValue() {
-                return coeffB * coeffB - 4 * coeffA * coeffC;
-            }
+public void solveEquation() {
+    /** Inner class calculating Discriminant */
+    class Discriminant {
+        private double value;
+        public Discriminant() {
+            value = calculateValue();
         }
-
-        Discriminant d = new Discriminant(); // value is calculated when constructing
-        if (d.value > PRECISION) { // real roots
-            x1 = String.valueOf((-coeffB - Math.sqrt(d.value)) / (2 * coeffA));
-            x2 = String.valueOf((-coeffB + Math.sqrt(d.value)) / (2 * coeffA));
-        }
-        else if (d.value >= -PRECISION && d.value <= PRECISION) { // one root, second condition is not necessary
-            x1 = String.valueOf((-coeffB) / (2 * coeffA));
-            x2 = x1;
-        }
-        else if (d.value < PRECISION) { // complex roots
-            double rePart = ((-coeffB) / (2 * coeffA)); // real part of both roots
-            double imPart = Math.sqrt((-1) * d.value) / (2 * coeffA); // imaginary multiplier
-            x1 = rePart + " + " + imPart + "i";
-            x2 = rePart + " - " + imPart + "i";
+        private double calculateValue() {
+            double value = coeffB * coeffB - 4 * coeffA * coeffC;
+            if (Double.isNaN(value))
+                throw new RuntimeException("[err] Not enough precision");
+            return value;
         }
     }
+
+    Discriminant d = new Discriminant(); // value is calculated when constructing
+    if (d.value > PRECISION) { // real roots
+        x1 = String.valueOf((-coeffB - Math.sqrt(d.value)) / (2 * coeffA));
+        x2 = String.valueOf((-coeffB + Math.sqrt(d.value)) / (2 * coeffA));
+    }
+    else if (d.value >= -PRECISION && d.value <= PRECISION) { // one root, second condition is not necessary
+        x1 = String.valueOf((-coeffB) / (2 * coeffA));
+        x2 = x1;
+    }
+    else if (d.value < PRECISION) { // complex roots
+        double rePart = ((-coeffB) / (2 * coeffA)); // real part of both roots
+        double imPart = Math.sqrt((-1) * d.value) / (2 * coeffA); // imaginary multiplier
+        x1 = rePart + " + " + imPart + "i";
+        x2 = rePart + " - " + imPart + "i";
+    }
+}
 ```
 
-> Дискриминант вычисляется внутренним классом. При компиляции основного класса __QuadraticEquation.java__ создаются 2 файла: файл основного класса __QuadraticEquation.class__ и файл вложенного класса __QuadraticEquation$1Discriminant.class__(то есть класс рассматривается как отдельный). 
+> Дискриминант вычисляется внутренним классом. При компиляции основного класса __QuadraticEquation.java__ создаются 2 файла: файл основного класса __QuadraticEquation.class__ и файл вложенного класса __QuadraticEquation$1Discriminant.class__(то есть класс рассматривается как отдельный).
 
 Метод __printSolutions()__ реализованный в данном классе печатает решения уравнения в консоль:
 ```java
@@ -190,7 +193,7 @@ public class QuadraticEquationTest {
 
 #### Рассмотрим методы класса:
 
-Конструктор, принимающий на вход количество игральных костей и список с участниками игры: 
+Конструктор, принимающий на вход количество игральных костей и список с участниками игры:
 ```java
     public DiceGame(int nDices, List<Player> players) {
         this.players = players;
@@ -230,7 +233,7 @@ public class QuadraticEquationTest {
 ```
 
 Метод __printResults()__ печатает победителей всей игры:
-```java 
+```java
     private void printResults() {
         System.out.println("List of winners:");
         if (!winners.isEmpty()) {
@@ -296,7 +299,7 @@ public class DiceGameTest {
 ### 3.2 __Adress.java__
 Теперь подробно рассмотрим класс __Address.java__, созданную для упорядовичвания аттрибутов адреса.
 
-Поля метода: 
+Поля метода:
 ```java
     private String country;
     private String city;
@@ -369,7 +372,7 @@ public class DiceGameTest {
 
 Теперь рассмотрим методы класса:
 
-Конструктор принимает на вход количество элементов в массиве: 
+Конструктор принимает на вход количество элементов в массиве:
 ```java
     public PersonsArray(int arraySize) {
         persons = new Person[arraySize];
