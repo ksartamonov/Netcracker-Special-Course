@@ -3,7 +3,7 @@ _Работу выполнил Артамонов Кирилл, студент �
 Программный код можно найти на [`GitHub`](https://github.com/ksartamonov/Netcracker-Special-Course/tree/master/PracticalTask2)
 ## 1. Говорящие животные ##
 Необходимо реализовать следующую диаграмму классов:
-![Speaking animals](https://github.com/ksartamonov/Netcracker-Special-Course/tree/master/PracticalTask2/pictures/speaking-animals-diagram.png)
+![Speaking animals](https://github.com/ksartamonov/Netcracker-Special-Course/blob/master/PracticalTask2/pictures/speaking-animals-diagram.png)
 
 Начнем с описания интерфейса __Voice__:
 ### 1.1 interface Voice ###
@@ -231,7 +231,7 @@ public class DiceGameTest {
 ```
 ## 3. Extended Class
 Необходимо реализовать класс, представленный на изображении:
-![Extended class](https://github.com/ksartamonov/Netcracker-Special-Course/tree/master/PracticalTask2/pictures/extended-class-diagram.png)
+![Extended class](https://github.com/ksartamonov/Netcracker-Special-Course/blob/master/PracticalTask2/pictures/extended-class-diagram.png)
 
 Реализация класса:
 ```java
