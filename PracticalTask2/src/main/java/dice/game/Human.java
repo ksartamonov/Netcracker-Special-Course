@@ -17,7 +17,7 @@ public class Human implements Player {
     }
 
     // Getters
-
+    @Override
     public String getName() {
         return name;
     }
