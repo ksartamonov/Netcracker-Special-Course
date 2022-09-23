@@ -1,7 +1,7 @@
 # Отчёт к учебному практическому заданию №2 #
 _Работу выполнил Артамонов Кирилл, студент группы Б01-007_
 
-Программный код можно найти на [`GitHub`](https://github.com/ksartamonov/Netcracker-Special-Course/tree/master/PracticalTask2)
+Последнюю версию отчета и программный код можно найти на [`GitHub`](https://github.com/ksartamonov/Netcracker-Special-Course/tree/master/PracticalTask2)
 ## 1. Говорящие животные ##
 Необходимо реализовать следующую диаграмму классов:
 ![Speaking animals](https://github.com/ksartamonov/Netcracker-Special-Course/blob/master/PracticalTask2/pictures/speaking-animals-diagram.png)
