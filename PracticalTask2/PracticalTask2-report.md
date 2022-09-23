@@ -130,6 +130,7 @@ public interface Player {
 ```
 Для класса __Human.java__:
 ```java
+    @Override
     public String getName() {
         return name;
     }
