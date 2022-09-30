@@ -158,6 +158,8 @@ Running time[without StringBuilder]: 28794134 ns.
 ## 4. Класс Shirt.
 Необходимо реализовать следующий класс:
 ![Shirt](https://github.com/ksartamonov/Netcracker-Special-Course/blob/master/PracticalTask3/pictures/shirt-diagram.png)
+
+
 Метод __toString()__  должен выводить объяснение и значения полей построчно. 
 Рассмотрим методы класса __Shirt.java__:
 Конструктор, принимающий на вход строку, из которой получает характеристики футболки. Опять используем __StringTokenizer__:
