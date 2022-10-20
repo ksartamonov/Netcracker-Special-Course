@@ -189,7 +189,7 @@ _Работу выполнил Артамонов Кирилл, студент �
     
     private void insert(Node curNode, Node newNode) {
 
-        if ((Double) newNode.getValue() < (Double) curNode.getValue()) {
+        if ((Integer) newNode.getValue() < (Integer) curNode.getValue()) {
             if (curNode.getLeft() == null) {
                 curNode.setLeft(newNode);
             } else {
@@ -197,7 +197,7 @@ _Работу выполнил Артамонов Кирилл, студент �
             }
         }
 
-        if ((Double) newNode.getValue() > (Double) curNode.getValue()) {
+        if ((Integer) newNode.getValue() > (Integer) curNode.getValue()) {
             if (curNode.getRight() == null) {
                 curNode.setRight(newNode);
             } else {
