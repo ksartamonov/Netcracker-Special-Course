@@ -10,8 +10,9 @@ _Работу выполнил Артамонов Кирилл, студент �
         StringBuilder strB = new StringBuilder();
         strB.append("INSERT INTO T_GroupSelected\n")
                 .append("(id_Student, firstName, lastName, id_Group)\n")
-                .append("VALUES\n")
+                .append("SELECT\n")
                 .append("id_Student, firstName, lastName, id_Group\n")
+                .append("FROM T_Student\n")
                 .append("WHERE " + "id_Group = '")
                 .append(group).append("' AND dolgCount > ")
                 .append(nDebts)
