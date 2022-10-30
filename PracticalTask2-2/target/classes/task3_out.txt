@@ -1,0 +1,5 @@
+Hello world
+I am java documentation
+If you are learning java u should read me
+Good luck
+in learning java
